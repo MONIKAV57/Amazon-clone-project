@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security App</title>
+    <style>
+        .popup {
+            position: fixed;
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 20px;
+            z-index: 1000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <h2>Fraud Alert!</h2>
+        <p>A spam message has been detected.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.querySelector('.popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.querySelector('.popup').style.display = 'none';
+        }
+
+        // Simulate spam message detection
+        setTimeout(showPopup, 3000);
+    </script>
+</body>
+</html>
